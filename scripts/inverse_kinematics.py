@@ -77,6 +77,8 @@ J5 = Matrix.vstack(DP_q5, Z_05)
 J6 = Matrix.vstack(DP_q6, Z_06)
 
 jacobian_matrix = Matrix.hstack(J1,J2,J3,J4,J5,J6)
+# Compute this numerically.
+# No need for analytical symbolic representation.
 
 jacobian_function = lambdify([theta1,theta2,theta3,theta4,theta5,theta6],jacobian_matrix)
 t0p_function = lambdify([theta1,theta2,theta3,theta4,theta5,theta6],T0P_symbols)
